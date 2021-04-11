@@ -26,7 +26,11 @@ export function drawGUI(): Canvas {
 
   const pixelArt = pixel.art(pixelMatrix).scale(1).palette(palette)
   const canvas = createCanvas(16, 16)
-  pixelArt.draw(canvas.getContext('2d'))
+  const ctx = canvas.getContext('2d')
+  ctx.translate(8, 8)
+  ctx.rotate(-Math.PI / 2)
+  ctx.translate(-8, -8)
+  pixelArt.draw(ctx)
   return canvas
 }
 
