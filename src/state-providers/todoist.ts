@@ -10,7 +10,7 @@ export function initTodoist() {
   const todoist = Todoist(config.todoistToken)
   const updateTodoistTasks = async () => {
     const pastMidnight = new Date().getHours() < 7
-    const filter = pastMidnight ? 'due before: today' : 'due before: tomorrow'
+    const filter = `due before: ${pastMidnight ? 'today' : 'tomorrow'} & !@Hidden`
     const tasks = await todoist.v1.task.findAll({ filter })
     state.todoist = tasks.length
     await redraw()

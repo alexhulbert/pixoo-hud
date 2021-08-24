@@ -11,6 +11,8 @@
         "axios": "^0.21.1",
         "canvas": "^2.7.0",
         "divoom-control": "git+https://github.com/MattIPv4/divoom-control.git",
+        "gpu.js": "^2.11.2",
+        "jimp": "^0.16.1",
         "pixel-art": "^1.3.0",
         "tmp": "^0.2.1",
         "todoist-rest-api": "^1.3.4"
